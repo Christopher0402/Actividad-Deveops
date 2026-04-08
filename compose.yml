@@ -1,0 +1,5 @@
+services:
+  web:
+    build: ./pag
+    ports:
+      - "5001:5001"
