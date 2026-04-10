@@ -16,7 +16,6 @@ phases:
 artifacts:
   files:
     - 'index.html'
-    - 'style.css'
     - 'styles.css'
     - 'src/**/*'
   discard-paths: no
