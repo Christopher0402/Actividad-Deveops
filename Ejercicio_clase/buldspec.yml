@@ -1,0 +1,14 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Preparando archivos para el bucket..."
+      - ls -R
+
+artifacts:
+  files:
+    - 'index.html'
+    - 'styles.css'
+    - 'style.css'
+  discard-paths: yes
