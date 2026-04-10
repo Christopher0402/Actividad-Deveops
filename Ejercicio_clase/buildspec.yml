@@ -1,21 +1,11 @@
 version: 0.2
-
 phases:
-  install:
-    commands:
-      - echo "Instalando dependencias si fuera necesario..."
-  pre_build:
-    commands:
-      - echo "Verificando archivos antes del build..."
-      - ls -R
   build:
     commands:
-      - echo "Building project..."
-      - echo "Build completed on $(date)"
-
+      - echo "Empaquetando archivos finales..."
+      - ls -la
 artifacts:
   files:
     - 'index.html'
     - 'styles.css'
-    - 'src/**/*'
-  discard-paths: no
+    - 'style.css'
