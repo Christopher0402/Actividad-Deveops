@@ -1,9 +1,21 @@
 version: 0.2
 
 phases:
-     install: 
-        commands:
-             - echo "Installing..."
-     build:
-         commands:
-              - docker build -t flask-pag ./pag
+  install:
+    commands:
+      - echo "Installing..."
+
+  build:
+    commands:
+      - echo "Build docker"
+      - docker build -t flask-app ./src
+      
+  post_build:
+    commands:
+      - echo "Running deploy script"
+      - chmod +x ejedeploy.sh
+      - ./ejedeploy.sh
+
+artifacts:
+  files:
+    - '**/*'
